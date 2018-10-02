@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Stephen Mylabathula</title>
+<link rel="stylesheet" href="Menu.css" type="text/css" media="all">
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lato"><br>
+<!-- use Lato100 for thin -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type = "text/javascript">
+          function displayNextImage() {
+			$('#cover').fadeOut(1000, function() {
+  					x = (x === images.length - 1) ? 0 : x + 1;
+              		document.getElementById("cover").src = images[x];
+			  		$("#cover").fadeIn(1000);	
+				});
+          }
+
+          function startTimer() {
+              setInterval(displayNextImage, 5000);
+          }
+
+          var images = [], x = 0;
+          images[0] = "images/golden_gate.jpg";
+          images[1] = "images/gbikes.jpg";
+          images[2] = "images/candle.jpg";
+		  images[3] = "images/prayer_request.jpg";
+</script>
+</head>
+
+<body onload = "startTimer()" style="text-align: center; padding-top: 30px;">
+    
+<div align="center" style="font-family: 'Lato', serif; font-size: 36px;  padding-top:30px"><strong>STEPHEN</strong> <font color="B0B0B0">|</font> <strong>MYLABATHULA</strong></div>
+    
+    <div align="center">
+    	<ul id="horizontal-list">
+  			<li><a class="active" href="index.html">HOME</a></li>
+  			<li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="resume.html">RESUMÉ</a></li>
+            <li><a href="books.html">BOOKS</a></li>
+  			<li><a href="about.html">ABOUT</a></li>
+		</ul>
+    </div>
+    
+    <div align="center">
+    <img id="cover" src="images/golden_gate.jpg" style="padding-top: 30px; padding-bottom: 50px; width: 70%; height: 70%;">
+    <img id="cover" src="images/gbikes.jpg" style="padding-top: 30px; padding-bottom: 50px; width: 0%; height:0%; visibility:hidden;">
+    <img id="cover" src="images/candle.jpg" style="padding-top: 30px; padding-bottom: 50px; width: 0%; height: 0%; visibility:hidden;">
+    <img id="cover" src="images/prayer_request.jpg" style="padding-top: 30px; padding-bottom: 50px; width: 0%; height: 0%; visibility:hidden;">
+    </div>
+    
+    
+    <hr style="width: 75%;">
+    
+    <footer>
+  		<a href="http://github.com/stephenmylabathula" target="_blank"><img src="github.png" style="padding-top: 10px; padding-bottom: 30px; padding-left: 5px; padding-right:5px;	width: 30px; height: 30px;"></a>
+        <a href="http://linkedin.com/in/mylabathula/" target="_blank"><img src="linkedin.png" style="padding-top: 10px; padding-bottom: 30px; padding-left: 5px; padding-right:5px;	width: 30px; height: 30px;"></a>
+	</footer>
+    
+</body>
+</html>
